@@ -14,16 +14,16 @@ Flutter plugin for NetEase RTC SDK.
   s.author           = { 'NetEase, Inc.' => 'liuqijun@corp.netease.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.public_header_files = 'Classes/**/*.h', 'Classes/libyuv/*h'
   s.dependency 'Flutter'
   # s.dependency 'Libyuv', '1703'
   s.dependency 'NERtcSDK', '3.7.0'
-  s.platform = :ios, '10.0'
+  s.platform = :ios, '9.0'
   # s.static_framework = true
 
-  arr = Array.new
-  arr.push('libs/Libyuv.framework')
-  s.ios.vendored_frameworks = arr
+  # arr = Array.new
+  # arr.push('libs/Libyuv.framework')
+  # s.ios.vendored_frameworks = arr
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

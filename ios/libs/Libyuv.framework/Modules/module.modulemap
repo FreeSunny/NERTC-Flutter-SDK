@@ -1,6 +1,0 @@
-framework module Libyuv {
-  umbrella header "Libyuv.h"
-
-  export *
-  module * { export * }
-}
